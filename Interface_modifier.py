@@ -53,6 +53,8 @@ class Interface_Change():
             self.draw_text("Categorie_id :", 20, 210)
             validate_button.draw(self.screen)
 
+            if not running:
+                pygame.display.set_mode((1200, 600))
 
             pygame.display.flip()
 

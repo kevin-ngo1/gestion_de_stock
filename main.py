@@ -52,6 +52,7 @@ while running:
     pygame.draw.line(screen, (0, 0, 0), (0, 130), (WIDTH, 130), 10)
 
     products = product_instance.get_all_products()
+    
     if products:
         y_position = 180
         for product in products:

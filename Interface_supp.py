@@ -27,6 +27,7 @@ class Interface_Del():
 
             for event in pygame.event.get():
                 if event.type == QUIT:
+
                     running = False
 
                 self.gui_manager.process_events(event)
@@ -38,6 +39,8 @@ class Interface_Del():
             self.draw_text("Id du produit :", 19, 105)
             validate_button.draw(self.screen)
 
+            if not running:
+                pygame.display.set_mode((1200, 600))
 
             pygame.display.flip()
 

@@ -29,13 +29,13 @@ class Interface_Add():
         validate_button = Button("Valider", (120, 230), (30, 35),self.validate, color="#00a331")
         self.product_instance = Product()
 
-        running=True
+        running = True
         while running:
             time_delta = self.clock.tick(30) / 1000.0
 
             for event in pygame.event.get():
                 if event.type == QUIT:
-                    running=False
+                    running = False
 
                 self.gui_manager.process_events(event)
                 validate_button.handle_event(event)
@@ -49,6 +49,11 @@ class Interface_Add():
             self.draw_text("Quantité :", 20, 150)
             self.draw_text("Categorie_id :", 20, 190)
             validate_button.draw(self.screen)
+
+            pygame.display.flip()
+
+            if not running:
+                pygame.display.set_mode((1200, 600))
 
 
             pygame.display.flip()
